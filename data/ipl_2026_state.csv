@@ -1,5 +1,4 @@
 data_snapshot_id,source,last_updated_utc,team,matches,wins,losses,no_results,points,nrr
-<<<<<<< HEAD
 cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Royal Challengers Bengaluru,12,8,4,0,16,1.053
 cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Gujarat Titans,12,8,4,0,16,0.551
 cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Sunrisers Hyderabad,12,7,5,0,14,0.331
@@ -10,15 +9,3 @@ cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian
 cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Kolkata Knight Riders,11,4,6,1,9,-0.198
 cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Mumbai Indians,12,4,8,0,8,-0.504
 cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Lucknow Super Giants,12,4,8,0,8,-0.701
-=======
-ipl-live-20260516-065532,CricAPI live ingest,2026-05-16T06:55:32.598176+00:00,Royal Challengers Bengaluru,12,9,3,0,18,0.74
-ipl-live-20260516-065532,CricAPI live ingest,2026-05-16T06:55:32.598176+00:00,Punjab Kings,12,8,3,1,17,0.57
-ipl-live-20260516-065532,CricAPI live ingest,2026-05-16T06:55:32.598176+00:00,Sunrisers Hyderabad,12,8,4,0,16,0.69
-ipl-live-20260516-065532,CricAPI live ingest,2026-05-16T06:55:32.598176+00:00,Gujarat Titans,12,7,5,0,14,0.31
-ipl-live-20260516-065532,CricAPI live ingest,2026-05-16T06:55:32.598176+00:00,Rajasthan Royals,12,6,6,0,12,0.08
-ipl-live-20260516-065532,CricAPI live ingest,2026-05-16T06:55:32.598176+00:00,Chennai Super Kings,12,6,6,0,12,-0.03
-ipl-live-20260516-065532,CricAPI live ingest,2026-05-16T06:55:32.598176+00:00,Delhi Capitals,12,6,6,0,12,-0.11
-ipl-live-20260516-065532,CricAPI live ingest,2026-05-16T06:55:32.598176+00:00,Kolkata Knight Riders,12,5,7,0,10,-0.28
-ipl-live-20260516-065532,CricAPI live ingest,2026-05-16T06:55:32.598176+00:00,Mumbai Indians,12,4,8,0,8,-0.41
-ipl-live-20260516-065532,CricAPI live ingest,2026-05-16T06:55:32.598176+00:00,Lucknow Super Giants,12,3,9,0,6,-0.62
->>>>>>> a216f690ac809e6d6f504b3ea1cd9f210d234874
