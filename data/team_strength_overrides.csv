@@ -1,0 +1,11 @@
+data_snapshot_id,source,last_updated_utc,team,batting_index,bowling_index,form_index,notes
+ipl-2026-manual-2026-05-16,Manual starter assumptions,2026-05-16T00:00:00+00:00,Royal Challengers Bengaluru,1.08,0.99,1.08,Strong table position and attacking batting profile
+ipl-2026-manual-2026-05-16,Manual starter assumptions,2026-05-16T00:00:00+00:00,Punjab Kings,1.03,1.02,1.06,Strong top-two race position
+ipl-2026-manual-2026-05-16,Manual starter assumptions,2026-05-16T00:00:00+00:00,Sunrisers Hyderabad,1.10,0.97,1.05,High batting ceiling but bowling volatility
+ipl-2026-manual-2026-05-16,Manual starter assumptions,2026-05-16T00:00:00+00:00,Gujarat Titans,1.02,1.06,1.02,Balanced side with good NRR
+ipl-2026-manual-2026-05-16,Manual starter assumptions,2026-05-16T00:00:00+00:00,Rajasthan Royals,1.00,1.00,1.00,Middle-pack baseline
+ipl-2026-manual-2026-05-16,Manual starter assumptions,2026-05-16T00:00:00+00:00,Chennai Super Kings,0.99,1.02,0.99,Experienced but uneven campaign
+ipl-2026-manual-2026-05-16,Manual starter assumptions,2026-05-16T00:00:00+00:00,Delhi Capitals,1.01,0.99,0.98,Still alive in playoff race
+ipl-2026-manual-2026-05-16,Manual starter assumptions,2026-05-16T00:00:00+00:00,Kolkata Knight Riders,0.98,0.98,0.95,Needs strong finish
+ipl-2026-manual-2026-05-16,Manual starter assumptions,2026-05-16T00:00:00+00:00,Mumbai Indians,1.02,0.94,0.93,Low table position offsets talent
+ipl-2026-manual-2026-05-16,Manual starter assumptions,2026-05-16T00:00:00+00:00,Lucknow Super Giants,0.96,0.96,0.90,Needs extreme results from here

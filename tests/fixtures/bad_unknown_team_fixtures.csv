@@ -1,0 +1,2 @@
+data_snapshot_id,source,last_updated_utc,match_no,date,team1,team2,venue,city,status,winner,team1_score,team2_score
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,1,2026-05-20,Mumbai Indians,Unknown XI,Wankhede Stadium,Mumbai,scheduled,,,

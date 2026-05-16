@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+pytest-cache-files-*/
+scratch/
+outputs/*.tmp
+.env
+.env.*
+!.env.example

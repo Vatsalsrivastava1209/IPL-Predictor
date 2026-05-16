@@ -1,0 +1,11 @@
+data_snapshot_id,source,last_updated_utc,team,matches,wins,losses,no_results,points,nrr
+ipl-2026-manual-2026-05-16,Manual starter snapshot,2026-05-16T00:00:00+00:00,Royal Challengers Bengaluru,12,9,3,0,18,0.74
+ipl-2026-manual-2026-05-16,Manual starter snapshot,2026-05-16T00:00:00+00:00,Punjab Kings,12,8,3,1,17,0.57
+ipl-2026-manual-2026-05-16,Manual starter snapshot,2026-05-16T00:00:00+00:00,Sunrisers Hyderabad,12,8,4,0,16,0.69
+ipl-2026-manual-2026-05-16,Manual starter snapshot,2026-05-16T00:00:00+00:00,Gujarat Titans,12,7,5,0,14,0.31
+ipl-2026-manual-2026-05-16,Manual starter snapshot,2026-05-16T00:00:00+00:00,Rajasthan Royals,12,6,6,0,12,0.08
+ipl-2026-manual-2026-05-16,Manual starter snapshot,2026-05-16T00:00:00+00:00,Chennai Super Kings,12,6,6,0,12,-0.03
+ipl-2026-manual-2026-05-16,Manual starter snapshot,2026-05-16T00:00:00+00:00,Delhi Capitals,12,6,6,0,12,-0.11
+ipl-2026-manual-2026-05-16,Manual starter snapshot,2026-05-16T00:00:00+00:00,Kolkata Knight Riders,12,5,7,0,10,-0.28
+ipl-2026-manual-2026-05-16,Manual starter snapshot,2026-05-16T00:00:00+00:00,Mumbai Indians,12,4,8,0,8,-0.41
+ipl-2026-manual-2026-05-16,Manual starter snapshot,2026-05-16T00:00:00+00:00,Lucknow Super Giants,12,3,9,0,6,-0.62

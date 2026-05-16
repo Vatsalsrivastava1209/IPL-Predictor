@@ -1,17 +1,101 @@
-# IPL 2026 Winner Prediction & Simulation
+# IPL 2026 Champion Predictor
 
-This project predicts the outcome of IPL matches and runs a Monte Carlo simulation to forecast the winner of the IPL 2026 tournament.
+A Streamlit dashboard for IPL 2026 playoff and title probabilities. The main engine is an explainable Hybrid Elo + Monte Carlo simulator, not the old Random Forest demo.
 
-## Project Structure
-- `data/`: Place your raw Kaggle CSV datasets here (`matches.csv`, `deliveries.csv`).
-- `src/`: Contains all the Python scripts for preprocessing, modeling, and simulation.
-- `notebooks/`: Jupyter notebooks for exploratory data analysis (EDA).
-- `app.py`: The Streamlit dashboard application.
+## What It Shows
+- Top 4 probability
+- Top 2 probability
+- Finalist probability
+- Champion probability
+- What-if impact for one upcoming match
+- X-ready summary text and CSV export
 
-## Setup Instructions
-1. Install dependencies: `pip install -r requirements.txt`
-2. Download the IPL dataset from Kaggle and place the CSV files in the `data/` folder.
-   - Recommended dataset: [IPL Complete Dataset (2008 - 2024)](https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020)
-3. Run the data preprocessing script.
-4. Train the model.
-5. Run the Streamlit app: `streamlit run app.py`
+## Data Source
+The dashboard supports live ingestion with manual CSV fallback.
+
+- `data/ipl_2026_state.csv`: current table snapshot
+- `data/ipl_2026_fixtures.csv`: remaining league fixtures
+- `data/team_strength_overrides.csv`: optional human adjustments for batting, bowling, and form
+
+Each manual CSV includes:
+- `data_snapshot_id`
+- `source`
+- `last_updated_utc`
+
+Update those files after each match. The app hashes the CSV contents and automatically reruns cached simulations when the snapshot changes.
+
+## Live API Mode
+The live layer uses CricAPI/CricketData and never stores your key in the repo.
+
+Set your key in the shell:
+```bash
+set CRICAPI_KEY=your_key_here
+```
+
+PowerShell:
+```powershell
+$env:CRICAPI_KEY="your_key_here"
+```
+
+Dry-run live ingest:
+```bash
+python -m src.live_ingest
+```
+
+Apply matched completed results to the CSVs:
+```bash
+python -m src.live_ingest --apply
+```
+
+Live mode updates matched fixtures and adjusts the local points table when a scheduled fixture becomes completed. Manual CSVs remain the source of truth and fallback.
+
+## After-Match Update Workflow
+1. Mark the completed fixture as `completed`.
+2. Fill `winner`, `team1_score`, and `team2_score`.
+3. Update the table in `ipl_2026_state.csv`.
+4. Update `data_snapshot_id` and `last_updated_utc`.
+5. Open the app and review the new odds.
+6. Check `outputs/probability_history.csv` to see how title odds moved.
+
+## Multi-Year Use
+The same architecture can be reused every IPL season:
+- create new season state and fixture CSVs
+- update `data_snapshot_id` naming
+- keep the historical `matches.csv` as the Elo prior
+- run simulations after each match
+
+The current file names are IPL 2026-specific, but the engine is intentionally CSV-driven so it can be generalized later.
+
+## Run Locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Run Tests
+```bash
+pytest
+```
+
+## Backtest
+```bash
+python -m src.backtest
+```
+
+This writes:
+- `outputs/backtest_predictions.csv`
+- `outputs/backtest_calibration.csv`
+- `reports/backtest_summary.md`
+
+## Run Logs
+When the dashboard runs simulations with persistence enabled, it writes:
+- `outputs/simulation_runs.csv`
+- `outputs/probability_history.csv`
+- `outputs/app_events.csv`
+
+## Methodology
+Historical IPL matches are used only as an Elo prior. Current season state, NRR, manual strength overrides, and remaining fixtures carry the public-facing prediction. The output is probabilistic: it estimates ranges, not guaranteed winners.
+
+The old model files in `models/` are kept as a historical baseline artifact. They are not required for the dashboard to run.
+
+See `reports/model_card.md` for assumptions, validation, limitations, and update process.

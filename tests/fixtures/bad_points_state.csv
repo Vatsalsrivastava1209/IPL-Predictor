@@ -1,0 +1,11 @@
+data_snapshot_id,source,last_updated_utc,team,matches,wins,losses,no_results,points,nrr
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,Chennai Super Kings,1,1,0,0,3,0.1
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,Delhi Capitals,1,0,1,0,0,0.0
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,Gujarat Titans,1,0,1,0,0,0.0
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,Kolkata Knight Riders,1,0,1,0,0,0.0
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,Lucknow Super Giants,1,0,1,0,0,0.0
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,Mumbai Indians,1,0,1,0,0,0.0
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,Punjab Kings,1,0,1,0,0,0.0
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,Rajasthan Royals,1,0,1,0,0,0.0
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,Royal Challengers Bengaluru,1,0,1,0,0,0.0
+test-snapshot,unit test,2026-05-16T00:00:00+00:00,Sunrisers Hyderabad,1,0,1,0,0,0.0
