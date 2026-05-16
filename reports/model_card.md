@@ -8,7 +8,7 @@ Estimate IPL 2026 playoff and title probabilities for a public, interactive dash
 - Remaining manual fixtures: `data/ipl_2026_fixtures.csv`
 - Manual strength assumptions: `data/team_strength_overrides.csv`
 - Historical IPL matches: `data/matches.csv`
-- Optional CricAPI live result ingest through `src.live_ingest`
+- Optional Cricbuzz points table + CricAPI live result ingest through `src.live_ingest`
 
 Every manual CSV includes `data_snapshot_id`, `source`, and `last_updated_utc` so runs can be traced to a specific input snapshot.
 

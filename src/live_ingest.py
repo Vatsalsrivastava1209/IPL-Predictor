@@ -7,6 +7,7 @@ from pathlib import Path
 import pandas as pd
 
 from src.data_loader import FIXTURES_FILE, STATE_FILE
+from src.cricbuzz_points import fetch_points_table
 from src.live_cricket_api import fetch_ipl_live_matches
 
 
@@ -107,12 +108,24 @@ def apply_live_matches(state, fixtures, live_matches, snapshot_id, source="CricA
     return state, fixtures, pd.DataFrame(updates)
 
 
-def ingest_live_data(apply=False):
-    live_matches = fetch_ipl_live_matches()
+def ingest_live_data(apply=False, refresh_cricbuzz_points=True):
+    live_matches = []
+    try:
+        live_matches = fetch_ipl_live_matches()
+    except ValueError as exc:
+        if not refresh_cricbuzz_points:
+            raise
+        print(f"CricAPI match ingest skipped: {exc}")
+
     state = pd.read_csv(STATE_FILE)
     fixtures = pd.read_csv(FIXTURES_FILE)
     snapshot_id = f"ipl-live-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}"
-    updated_state, updated_fixtures, updates = apply_live_matches(state, fixtures, live_matches, snapshot_id)
+
+    if refresh_cricbuzz_points:
+        state = fetch_points_table()
+
+    source = "Cricbuzz points table + CricAPI live ingest" if refresh_cricbuzz_points else "CricAPI live ingest"
+    updated_state, updated_fixtures, updates = apply_live_matches(state, fixtures, live_matches, snapshot_id, source=source)
     if apply:
         updated_state.to_csv(STATE_FILE, index=False)
         updated_fixtures.to_csv(FIXTURES_FILE, index=False)
@@ -122,9 +135,10 @@ def ingest_live_data(apply=False):
 def main():
     parser = ArgumentParser(description="Fetch CricAPI IPL results and update local CSVs.")
     parser.add_argument("--apply", action="store_true", help="Write updates to CSV files. Without this, run in dry-run mode.")
+    parser.add_argument("--skip-cricbuzz-points", action="store_true", help="Do not refresh the points table from Cricbuzz.")
     args = parser.parse_args()
     try:
-        updates = ingest_live_data(apply=args.apply)
+        updates = ingest_live_data(apply=args.apply, refresh_cricbuzz_points=not args.skip_cricbuzz_points)
     except ValueError as exc:
         print(f"Live ingest skipped: {exc}")
         print("Set CRICAPI_KEY in your shell, then rerun this command.")

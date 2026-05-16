@@ -57,6 +57,9 @@ def normalize_team_name(team):
     if team is None:
         return ""
     value = str(team).strip()
+    value = value.replace("<!-- -->", "").strip()
+    for marker in ["(E)", "(Q)"]:
+        value = value.replace(marker, "").strip()
     if not value or value.lower() == "nan":
         return ""
     return TEAM_ALIASES.get(value, value)
