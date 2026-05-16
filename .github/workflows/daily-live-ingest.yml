@@ -1,0 +1,47 @@
+name: Daily IPL live ingest
+
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+    env:
+      CRICAPI_KEY: ${{ secrets.CRICAPI_KEY }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Apply live cricket update
+        run: python -m src.live_ingest --apply
+
+      - name: Persist latest simulation odds
+        run: python -c "from src.simulator import run_monte_carlo; run_monte_carlo(n_simulations=10000, persist=True)"
+
+      - name: Commit updated snapshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ipl_2026_state.csv data/ipl_2026_fixtures.csv outputs/simulation_runs.csv outputs/probability_history.csv
+          if git diff --cached --quiet; then
+            echo "No live data changes to commit."
+          else
+            git commit -m "Refresh IPL live data snapshot"
+            git push
+          fi

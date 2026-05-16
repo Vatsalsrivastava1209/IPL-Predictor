@@ -27,6 +27,16 @@ Update those files after each match. The app hashes the CSV contents and automat
 ## Live API Mode
 The live layer uses CricAPI/CricketData and never stores your key in the repo.
 
+For the deployed app, put the key in **GitHub repository secrets**, not in code:
+
+```text
+Repository Settings -> Secrets and variables -> Actions -> New repository secret
+Name: CRICAPI_KEY
+Value: your API key
+```
+
+The workflow in `.github/workflows/daily-live-ingest.yml` runs once per day and can also be triggered manually from GitHub Actions.
+
 Set your key in the shell:
 ```bash
 set CRICAPI_KEY=your_key_here
@@ -48,6 +58,8 @@ python -m src.live_ingest --apply
 ```
 
 Live mode updates matched fixtures and adjusts the local points table when a scheduled fixture becomes completed. Manual CSVs remain the source of truth and fallback.
+
+On Streamlit Cloud, users do not run `python -m src.live_ingest --apply`. The deployed app only reads the latest committed CSV snapshot. GitHub Actions performs the refresh and commits changes.
 
 ## After-Match Update Workflow
 1. Mark the completed fixture as `completed`.

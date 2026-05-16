@@ -76,12 +76,10 @@ with st.sidebar:
     st.caption("10,000 is the default for stable public screenshots.")
     st.divider()
     st.header("Live data")
+    st.success("CSV snapshot mode")
+    st.caption("Daily API refresh should run in GitHub Actions. The app reads the latest committed CSV snapshot.")
     if environ.get("CRICAPI_KEY"):
-        st.success("CricAPI key detected")
-        st.caption("Run `python -m src.live_ingest --apply` after matches to refresh CSVs.")
-    else:
-        st.warning("CRICAPI_KEY not set")
-        st.caption("Dashboard is using CSV fallback mode.")
+        st.caption("A Streamlit secret is present, but writes should still happen through the scheduled workflow.")
     st.divider()
     st.header("Data source")
     st.write(f"State: `{STATE_FILE.name}`")
