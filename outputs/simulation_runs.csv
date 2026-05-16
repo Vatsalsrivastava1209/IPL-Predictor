@@ -1,2 +1,3 @@
 run_id,run_timestamp_utc,data_snapshot_hash,n_simulations,seed,runtime_ms,success,error_type,locked_match_no,locked_winner,top_team,top_champion_pct
 8beae4c10b81422bad4ae91c33b46e06,2026-05-16T06:07:40.362284+00:00,71d331dd5c657149,1000,42,1832.61,True,,,,Royal Challengers Bengaluru,39.6
+60b3bf374b26484d855e65a363206380,2026-05-16T06:55:50.686570+00:00,280f776d604abb07,10000,42,17677.98,True,,,,Royal Challengers Bengaluru,37.8
