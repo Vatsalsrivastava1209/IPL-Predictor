@@ -1,11 +1,11 @@
 data_snapshot_id,source,last_updated_utc,team,matches,wins,losses,no_results,points,nrr
-cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Royal Challengers Bengaluru,12,8,4,0,16,1.053
-cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Gujarat Titans,12,8,4,0,16,0.551
-cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Sunrisers Hyderabad,12,7,5,0,14,0.331
-cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Punjab Kings,12,6,5,1,13,0.355
-cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Rajasthan Royals,11,6,5,0,12,0.082
-cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Chennai Super Kings,12,6,6,0,12,0.027
-cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Delhi Capitals,12,5,7,0,10,-0.993
-cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Kolkata Knight Riders,11,4,6,1,9,-0.198
-cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Mumbai Indians,12,4,8,0,8,-0.504
-cricbuzz-ipl-2026-2026-05-16,https://www.cricbuzz.com/cricket-series/9241/indian-premier-league-2026/points-table,2026-05-16T00:00:00+00:00,Lucknow Super Giants,12,4,8,0,8,-0.701
+ipl-live-20260517-063603,Cricbuzz points table + CricAPI live ingest,2026-05-17T06:36:03.471284+00:00,Royal Challengers Bengaluru,12,8,4,0,16,1.053
+ipl-live-20260517-063603,Cricbuzz points table + CricAPI live ingest,2026-05-17T06:36:03.471284+00:00,Gujarat Titans,13,8,5,0,16,0.4
+ipl-live-20260517-063603,Cricbuzz points table + CricAPI live ingest,2026-05-17T06:36:03.471284+00:00,Sunrisers Hyderabad,12,7,5,0,14,0.331
+ipl-live-20260517-063603,Cricbuzz points table + CricAPI live ingest,2026-05-17T06:36:03.471284+00:00,Punjab Kings,12,6,5,1,13,0.355
+ipl-live-20260517-063603,Cricbuzz points table + CricAPI live ingest,2026-05-17T06:36:03.471284+00:00,Rajasthan Royals,11,6,5,0,12,0.082
+ipl-live-20260517-063603,Cricbuzz points table + CricAPI live ingest,2026-05-17T06:36:03.471284+00:00,Chennai Super Kings,12,6,6,0,12,0.027
+ipl-live-20260517-063603,Cricbuzz points table + CricAPI live ingest,2026-05-17T06:36:03.471284+00:00,Kolkata Knight Riders,12,5,6,1,11,-0.038
+ipl-live-20260517-063603,Cricbuzz points table + CricAPI live ingest,2026-05-17T06:36:03.471284+00:00,Delhi Capitals,12,5,7,0,10,-0.993
+ipl-live-20260517-063603,Cricbuzz points table + CricAPI live ingest,2026-05-17T06:36:03.471284+00:00,Mumbai Indians,12,4,8,0,8,-0.504
+ipl-live-20260517-063603,Cricbuzz points table + CricAPI live ingest,2026-05-17T06:36:03.471284+00:00,Lucknow Super Giants,12,4,8,0,8,-0.701
