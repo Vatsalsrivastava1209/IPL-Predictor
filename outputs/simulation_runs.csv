@@ -4,3 +4,4 @@ run_id,run_timestamp_utc,data_snapshot_hash,n_simulations,seed,runtime_ms,succes
 fee40817d5f74c81903f50be4686fc24,2026-05-17T06:36:21.472582+00:00,d3cbdd909c924c44,10000,42,17592.43,True,,,,Royal Challengers Bengaluru,36.92
 8f3a31dd98d24785a42fcdca85829e94,2026-05-18T07:11:14.129535+00:00,d3cbdd909c924c44,10000,42,14648.7,True,,,,Royal Challengers Bengaluru,36.92
 6f429d4684074503a28e9e71ddafea7a,2026-05-19T07:01:32.278250+00:00,d3cbdd909c924c44,10000,42,17124.32,True,,,,Royal Challengers Bengaluru,36.92
+9a99eb218b934aec9be87f788208be09,2026-05-20T07:01:45.757435+00:00,d3cbdd909c924c44,10000,42,13277.29,True,,,,Royal Challengers Bengaluru,36.92
